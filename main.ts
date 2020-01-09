@@ -44,8 +44,9 @@ function player () {
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
     info.changeScoreBy(1)
 })
-let player_awesome: Sprite = null
 let projectile2: Sprite = null
+let player_awesome: Sprite = null
+scene.cameraFollowSprite(player_awesome)
 info.setScore(0)
 player()
 game.onUpdate(function () {
